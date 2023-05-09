@@ -1,0 +1,231 @@
+object Form1: TForm1
+  Left = 256
+  Height = 415
+  Top = 145
+  Width = 397
+  Caption = 'Form1'
+  ClientHeight = 415
+  ClientWidth = 397
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 104
+    Height = 40
+    Top = 24
+    Width = 152
+    Alignment = taCenter
+    AutoSize = False
+    Caption = 'Записная книжка'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -16
+    Font.Name = 'Palatino Linotype'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 32
+    Height = 23
+    Top = 72
+    Width = 64
+    AutoSize = False
+    Caption = 'Фамилия'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Palatino Linotype'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 40
+    Height = 24
+    Top = 112
+    Width = 40
+    AutoSize = False
+    Caption = 'Имя'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Palatino Linotype'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label4: TLabel
+    Left = 32
+    Height = 23
+    Top = 160
+    Width = 72
+    AutoSize = False
+    Caption = 'Отчество'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Palatino Linotype'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 40
+    Height = 24
+    Top = 200
+    Width = 64
+    AutoSize = False
+    Caption = 'E-mail'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Palatino Linotype'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 40
+    Height = 32
+    Top = 248
+    Width = 69
+    AutoSize = False
+    Caption = 'Телефон'
+    Font.CharSet = RUSSIAN_CHARSET
+    Font.Height = -15
+    Font.Name = 'Palatino Linotype'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object DBNavigator1: TDBNavigator
+    Left = 72
+    Height = 25
+    Top = 304
+    Width = 241
+    BevelOuter = bvNone
+    ChildSizing.EnlargeHorizontal = crsScaleChilds
+    ChildSizing.EnlargeVertical = crsScaleChilds
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 100
+    ClientHeight = 25
+    ClientWidth = 241
+    DataSource = DataSource1
+    Options = []
+    TabOrder = 0
+  end
+  object DBEdit1: TDBEdit
+    Left = 216
+    Height = 23
+    Top = 72
+    Width = 80
+    DataField = 'Фамилия'
+    DataSource = DataSource1
+    MaxLength = 16
+    TabOrder = 1
+  end
+  object DBEdit2: TDBEdit
+    Left = 216
+    Height = 23
+    Top = 120
+    Width = 80
+    DataField = 'Имя'
+    DataSource = DataSource1
+    MaxLength = 16
+    TabOrder = 2
+  end
+  object DBEdit3: TDBEdit
+    Left = 216
+    Height = 23
+    Top = 160
+    Width = 80
+    DataField = 'Отчество'
+    DataSource = DataSource1
+    MaxLength = 16
+    TabOrder = 3
+  end
+  object DBEdit4: TDBEdit
+    Left = 216
+    Height = 23
+    Top = 208
+    Width = 80
+    DataField = 'E-mail'
+    DataSource = DataSource1
+    MaxLength = 16
+    TabOrder = 4
+  end
+  object DBEdit5: TDBEdit
+    Left = 216
+    Height = 23
+    Top = 248
+    Width = 80
+    DataField = 'Телефон'
+    DataSource = DataSource1
+    MaxLength = 16
+    TabOrder = 5
+  end
+  object DataSource1: TDataSource
+    DataSet = SdfDataSet1
+    Left = 48
+    Top = 352
+  end
+  object SdfDataSet1: TSdfDataSet
+    FileMustExist = True
+    ReadOnly = False
+    FileName = 'C:\Users\User\Desktop\лаба6\Baza.txt.txt'
+    Schema.Strings = (
+      'Фамилия'
+      'Имя'
+      'Отчество'
+      'E-mail'
+      'Телефон'
+    )
+    FieldDefs = <    
+      item
+        Name = 'Фамилия'
+        DataType = ftString
+        Precision = -1
+        Size = 16
+      end    
+      item
+        Name = 'Имя'
+        DataType = ftString
+        Precision = -1
+        Size = 16
+      end    
+      item
+        Name = 'Отчество'
+        DataType = ftString
+        Precision = -1
+        Size = 16
+      end    
+      item
+        Name = 'E-mail'
+        DataType = ftString
+        Precision = -1
+        Size = 16
+      end    
+      item
+        Name = 'Телефон'
+        DataType = ftString
+        Precision = -1
+        Size = 16
+      end>
+    Active = True
+    AutoCalcFields = False
+    AllowMultiLine = False
+    Delimiter = #9
+    FirstLineAsSchema = False
+    StripTrailingDelimiters = False
+    Left = 312
+    Top = 352
+  end
+end
